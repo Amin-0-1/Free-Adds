@@ -11,7 +11,7 @@ import Combine
 class HomeVC: UIViewController {
     @IBOutlet weak var uiCollection: UICollectionView!
     
-    private var viewModel: HomeViewModelInterface?
+    private var viewModel: HomeViewModelInterface
     private var cancellables: Set<AnyCancellable> = []
     init(viewModel: HomeViewModelInterface) {
         self.viewModel = viewModel
@@ -34,12 +34,15 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         setupView()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureCollection()
+        viewModel.onScreenAppeared.send()
+    }
     private func setupView() {
         bind()
         registerCell()
-        configureCollection()
         configureNavigationItem()
-        viewModel?.onScreenAppeared.send()
     }
     // MARK: - navigation
     private func configureNavigationItem() {
@@ -74,8 +77,8 @@ class HomeVC: UIViewController {
         }
         addCell = UICollectionView.CellRegistration(
             cellNib: .init(nibName: AddCell.nibName, bundle: nil)
-        ) { cell, indexPath, itemIdentifier in
-            
+        ) { cell, _, itemIdentifier in
+            cell.configure(model: itemIdentifier)
         }
         
         header = UICollectionView.SupplementaryRegistration(
@@ -91,7 +94,6 @@ class HomeVC: UIViewController {
     }
     // MARK: - configure ceollection
     private func configureCollection() {
-//        uiCollection.allowsMultipleSelection = false
         uiCollection.collectionViewLayout = generateLayout()
         datasource = .init(
             collectionView: uiCollection) {[weak self] collectionView, indexPath, itemIdentifier in
@@ -150,21 +152,59 @@ class HomeVC: UIViewController {
     }
     // MARK: - bind view model
     private func bind() {
-        viewModel?.discoverData.sink {[weak self] model in
+        viewModel.discoverData.sink {[weak self] model in
             guard let self = self else {return}
             snapshot.appendSections([.discover])
             snapshot.appendItems(model, toSection: .discover)
             datasource?.apply(snapshot)
         }.store(in: &cancellables)
         
-        viewModel?.categoryData.sink {[weak self] model in
+        viewModel.categoryData.sink {[weak self] model in
             guard let self = self else {return}
             self.snapshot.appendSections([.category])
             self.snapshot.appendItems(model, toSection: .category)
+            self.datasource?.apply(self.snapshot, animatingDifferences: true) {[weak self] in
+                guard let self = self else {return}
+                self.uiCollection.selectItem(at: .init(item: 0, section: 1), animated: true, scrollPosition: .top)
+                self.uiCollection.delegate?.collectionView?(uiCollection, didSelectItemAt: .init(item: 0, section: 1))
+            }
+        }.store(in: &cancellables)
+        viewModel.adsData.sink { [weak self] model in
+            guard let self = self else {return}
+            self.snapshot.deleteSections([.list])
+            self.snapshot.appendSections([.list])
+            self.snapshot.appendItems(model, toSection: .list)
             self.datasource?.apply(self.snapshot, animatingDifferences: true)
         }.store(in: &cancellables)
     }
     @objc func messageTapped() {
         
+    }
+    
+    @IBAction func addFreeAdPressed(_ sender: UIButton) {
+        viewModel.addFreeAdPressed.send()
+    }
+}
+
+extension HomeVC: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        guard let section = HomeSection(rawValue: indexPath.section) else {return true}
+        switch section {
+            case .discover:
+                return false
+            default:
+                break
+        }
+        return true
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let section = HomeSection(rawValue: indexPath.section) else {return}
+        switch section {
+            case .category:
+                viewModel.onCategorySelected.send(indexPath.item)
+            default:
+                break
+                
+        }
     }
 }

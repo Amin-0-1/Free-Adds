@@ -9,9 +9,11 @@ import UIKit
 
 class AddCell: UICollectionViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var uiImage: UIImageView!
+
+    func configure(model: HomeIdentifier) {
+        guard let image = model.add?.image else {return}
+        uiImage.image = UIImage(data: image)
     }
 
 }
