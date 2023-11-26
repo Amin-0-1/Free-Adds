@@ -9,16 +9,19 @@ import Foundation
 struct HomeIdentifier: Hashable {
     var person: PersonModel?
     var tag: String?
+    var add: AddModel?
     
     init(
         person: PersonModel? = nil,
-        tag: String? = nil
+        tag: String? = nil,
+        addModel: AddModel? = nil
     ) {
         self.person = person
+        self.add = addModel
         self.tag = tag
     }
     static func == (lhs: HomeIdentifier, rhs: HomeIdentifier) -> Bool {
-        (lhs.person == rhs.person && lhs.person != nil) || (lhs.tag == rhs.tag && lhs.tag != nil)
+        lhs.uuid == rhs.uuid
     }
     private var uuid = UUID()
     func hash(into hasher: inout Hasher) {

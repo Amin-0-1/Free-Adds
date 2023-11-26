@@ -123,6 +123,7 @@
             </constraints>
             <size key="customSize" width="227" height="179"/>
             <connections>
+                <outlet property="uiFollowButton" destination="b56-Ko-vv2" id="8BC-yL-8Qb"/>
                 <outlet property="uiImage" destination="tLx-bD-gYj" id="exp-PP-Z6v"/>
                 <outlet property="uiName" destination="aUx-SE-wXY" id="YIV-Qt-ujA"/>
                 <outlet property="uiPosition" destination="FdQ-EI-SPV" id="iyu-DP-jb7"/>
