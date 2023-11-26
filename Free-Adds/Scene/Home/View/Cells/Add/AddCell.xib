@@ -34,6 +34,9 @@
                 <constraint firstAttribute="bottom" secondItem="mXv-C4-TfL" secondAttribute="bottom" id="jc9-0H-2yh"/>
             </constraints>
             <size key="customSize" width="349" height="396"/>
+            <connections>
+                <outlet property="uiImage" destination="mXv-C4-TfL" id="OaC-jb-ajN"/>
+            </connections>
             <point key="canvasLocation" x="158.01526717557252" y="141.5492957746479"/>
         </collectionViewCell>
     </objects>

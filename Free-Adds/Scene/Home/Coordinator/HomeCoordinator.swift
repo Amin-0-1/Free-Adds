@@ -8,7 +8,7 @@
 import UIKit
 
 protocol HomeCoordinatorInterface: Coordinator {
-    
+    func navigateToAd()
 }
 struct HomeCoordinator: HomeCoordinatorInterface {
     var nav: UINavigationController
@@ -17,5 +17,9 @@ struct HomeCoordinator: HomeCoordinatorInterface {
         let viewModel = HomeViewModel(coordinator: self)
         let vc = HomeVC(viewModel: viewModel)
         nav.setViewControllers([vc], animated: true)
+    }
+    func navigateToAd() {
+        let coordinator = AddCoordinator(nav: nav)
+        coordinator.start()
     }
 }

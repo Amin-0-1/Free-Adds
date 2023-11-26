@@ -11,7 +11,15 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        print(NSHomeDirectory())
+        let customFont = UIFont(name: "Poppins-Bold", size: 18.0)
+        let customFontColor = UIColor.white
+        
+        UINavigationBar.appearance().titleTextAttributes = [
+            .font: customFont ?? UIFont.systemFont(ofSize: 18, weight: .bold),
+            .foregroundColor: customFontColor
+        ]
+
         return true
     }
 

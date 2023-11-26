@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>We Need to access your Microphone</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>We Need to access Photo Library</string>
+	<key>NSCameraUsageDescription</key>
+	<string>We Need to access your Camera</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Poppins-bold</string>

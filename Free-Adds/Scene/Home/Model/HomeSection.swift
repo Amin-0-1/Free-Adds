@@ -21,4 +21,4 @@ enum HomeSection: Int, Hashable, CustomStringConvertible {
                 return ""
         }
     }
-    }
+}
