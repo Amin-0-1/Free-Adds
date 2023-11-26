@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AddCell" customModule="Free_Adds" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="349" height="396"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="349" height="396"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="mXv-C4-TfL">
+                        <rect key="frame" x="8" y="0.0" width="333" height="396"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="_CornerRadius">
+                                <real key="value" value="16"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="mXv-C4-TfL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="JWd-L8-dGz"/>
+                <constraint firstAttribute="trailing" secondItem="mXv-C4-TfL" secondAttribute="trailing" constant="8" id="XmJ-Lc-Rvd"/>
+                <constraint firstItem="mXv-C4-TfL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="b2S-ID-Wzi"/>
+                <constraint firstAttribute="bottom" secondItem="mXv-C4-TfL" secondAttribute="bottom" id="jc9-0H-2yh"/>
+            </constraints>
+            <size key="customSize" width="349" height="396"/>
+            <point key="canvasLocation" x="158.01526717557252" y="141.5492957746479"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="food" width="182" height="344"/>
+    </resources>
+</document>

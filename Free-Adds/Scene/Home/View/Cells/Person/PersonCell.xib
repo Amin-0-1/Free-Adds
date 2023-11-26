@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Bold.ttf">
+            <string>Poppins-Bold</string>
+        </array>
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PersonCell" customModule="Free_Adds" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="227" height="179"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="227" height="179"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uQk-vk-sYM">
+                        <rect key="frame" x="0.0" y="0.0" width="227" height="179"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="IPp-bA-sH9">
+                                <rect key="frame" x="5" y="5" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="FPr-Yk-kZh"/>
+                                    <constraint firstAttribute="width" constant="32" id="PeT-IG-nda"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ann" translatesAutoresizingMaskIntoConstraints="NO" id="tLx-bD-gYj">
+                                <rect key="frame" x="87.666666666666671" y="21" width="52.000000000000014" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="999" constant="52" id="4Vn-hW-jlC"/>
+                                    <constraint firstAttribute="width" constant="52" id="j3b-Uh-Vf2"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="_CornerRadius">
+                                        <real key="value" value="26"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amr Salama" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUx-SE-wXY">
+                                <rect key="frame" x="5" y="78" width="217" height="19.666666666666671"/>
+                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Film Director" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdQ-EI-SPV">
+                                <rect key="frame" x="5" y="102.66666666666667" width="217" height="14"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="10"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b56-Ko-vv2">
+                                <rect key="frame" x="88.333333333333329" y="131" width="50.333333333333329" height="28"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="JCb-BZ-CN0"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Follow">
+                                    <fontDescription key="titleFontDescription" name="Poppins-Bold" family="Poppins" pointSize="8"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="_FullRounded" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="_BorderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_BorderColor">
+                                        <color key="value" name="AccentColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="followPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="9Wg-MM-Iip"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="c_test"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="b56-Ko-vv2" secondAttribute="bottom" constant="20" id="1Ka-Ol-BJ6"/>
+                            <constraint firstItem="FdQ-EI-SPV" firstAttribute="trailing" secondItem="aUx-SE-wXY" secondAttribute="trailing" id="4co-Ok-jjG"/>
+                            <constraint firstItem="tLx-bD-gYj" firstAttribute="top" secondItem="IPp-bA-sH9" secondAttribute="top" constant="16" id="9Fd-Ff-iMJ"/>
+                            <constraint firstItem="b56-Ko-vv2" firstAttribute="top" secondItem="FdQ-EI-SPV" secondAttribute="bottom" priority="250" constant="5" id="Kju-m2-UUd"/>
+                            <constraint firstItem="aUx-SE-wXY" firstAttribute="top" secondItem="tLx-bD-gYj" secondAttribute="bottom" constant="5" id="P3m-we-wmg"/>
+                            <constraint firstItem="IPp-bA-sH9" firstAttribute="top" secondItem="uQk-vk-sYM" secondAttribute="top" constant="5" id="UFj-Dd-PgE"/>
+                            <constraint firstItem="tLx-bD-gYj" firstAttribute="centerX" secondItem="uQk-vk-sYM" secondAttribute="centerX" id="eMG-lE-8h4"/>
+                            <constraint firstItem="aUx-SE-wXY" firstAttribute="leading" secondItem="IPp-bA-sH9" secondAttribute="leading" id="hG2-Ny-wYA"/>
+                            <constraint firstItem="IPp-bA-sH9" firstAttribute="leading" secondItem="uQk-vk-sYM" secondAttribute="leading" constant="5" id="mmS-DS-vOW"/>
+                            <constraint firstItem="FdQ-EI-SPV" firstAttribute="top" secondItem="aUx-SE-wXY" secondAttribute="bottom" constant="5" id="ofp-iX-bX4"/>
+                            <constraint firstAttribute="trailing" secondItem="aUx-SE-wXY" secondAttribute="trailing" constant="5" id="seS-Tp-FTd"/>
+                            <constraint firstItem="b56-Ko-vv2" firstAttribute="centerX" secondItem="uQk-vk-sYM" secondAttribute="centerX" id="vhY-dO-spz"/>
+                            <constraint firstItem="FdQ-EI-SPV" firstAttribute="leading" secondItem="aUx-SE-wXY" secondAttribute="leading" id="w81-X9-8Zo"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="_CornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="_BorderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="_BorderColor">
+                                <color key="value" name="AccentColor"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="uQk-vk-sYM" secondAttribute="trailing" id="Gu3-9B-Gpm"/>
+                <constraint firstItem="uQk-vk-sYM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="PlA-cP-NrK"/>
+                <constraint firstAttribute="bottom" secondItem="uQk-vk-sYM" secondAttribute="bottom" id="QWv-yJ-Mf6"/>
+                <constraint firstItem="uQk-vk-sYM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="qez-Ab-gkh"/>
+            </constraints>
+            <size key="customSize" width="227" height="179"/>
+            <connections>
+                <outlet property="uiImage" destination="tLx-bD-gYj" id="exp-PP-Z6v"/>
+                <outlet property="uiName" destination="aUx-SE-wXY" id="YIV-Qt-ujA"/>
+                <outlet property="uiPosition" destination="FdQ-EI-SPV" id="iyu-DP-jb7"/>
+            </connections>
+            <point key="canvasLocation" x="-576.33587786259545" y="63.732394366197184"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ann" width="58" height="58.333332061767578"/>
+        <image name="star" width="32" height="32"/>
+        <namedColor name="AccentColor">
+            <color red="1" green="0.72156862745098038" blue="0.0039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="c_test">
+            <color red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="0.10000000149011612" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
