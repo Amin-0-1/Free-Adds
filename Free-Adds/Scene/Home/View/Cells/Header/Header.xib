@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Bold.ttf">
+            <string>Poppins-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="Header" customModule="Free_Adds" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="383" height="125"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Wd-VC-shk">
+                    <rect key="frame" x="8" y="16" width="367" height="59"/>
+                    <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <constraints>
+                <constraint firstItem="9Wd-VC-shk" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="16" id="1EY-7t-Tvf"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="9Wd-VC-shk" secondAttribute="trailing" constant="8" id="LY0-hW-U96"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="9Wd-VC-shk" secondAttribute="bottom" constant="16" id="TyD-aq-sBV"/>
+                <constraint firstItem="9Wd-VC-shk" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" constant="8" id="zEh-IK-o4f"/>
+            </constraints>
+            <connections>
+                <outlet property="uiTitle" destination="9Wd-VC-shk" id="HNW-tV-Bnn"/>
+            </connections>
+            <point key="canvasLocation" x="-22.137404580152669" y="46.126760563380287"/>
+        </collectionReusableView>
+    </objects>
+</document>
